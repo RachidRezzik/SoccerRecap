@@ -1,13 +1,263 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url(./images/stadium.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: 'PT Sans', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.app_title{
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 50px;
 }
+
+.container{
+  background: white;
+  margin: 50px auto;
+  margin-top: 10px;
+  width: 98%;
+  max-width: 725px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.main_nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: black;
+  color:white;
+  padding: 0px 10px;
+  padding-right: 0px;
+  border-radius: 5px 5px 0px 0px;
+  height: 40px;
+}
+
+
+.logo{
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+
+.logo h2{
+  font-size: 10px;
+}
+
+#four{
+  color:gold;
+}
+
+.soccer_ball{
+  width: 10px;
+  height: 10px;
+  margin-right: 1px;
+}
+
+.nav_links{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  height: 40px;
+  margin-left: -30px;
+}
+
+.nav_links li{
+  height: 100%;
+}
+
+.nav_links li a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0px 7.5px;
+  color: white;
+  text-align: center;
+  height: 100%;
+  font-size: 10px;
+}
+
+.nav_links .active, .nav_links .active:hover{
+  background: white;
+  color: black;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.nav_links a:hover{
+  color:gold;
+}
+
+
+
+/* **********WORLD CUP******************** */
+
+
+.world_cup_nav{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100px;
+}
+
+.wc_summary{
+  display: flex;
+  flex-direction: row;
+  margin-right: 5%;
+  margin-left: 2px;
+  font-size: 15px;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.wc_summary a{
+  margin-top: 2px;
+}
+
+.wc_winners_half{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+
+.world_cup_nav a{
+  background: rgb(223, 222, 222);
+  color: black;
+  padding: 2.5px 5px;
+  margin-top: 2px;
+  margin-left: 2px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-bottom: 0px;
+}
+
+.world_cup_nav a:hover{
+  background: black;
+  color: gold;
+}
+
+.world_cup_nav a.active{
+  background: rgb(9, 52, 241);
+  color: white;
+}
+
+#winners{
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+#world_cup_img{
+  width: 20px;
+  height: 30px;
+}
+
+.winners_nav{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2px;
+  padding: 0px;
+  font-size: 15px;
+}
+
+
+/* ***********CHAMPIONS LEAGUE******** */
+
+.years_nav{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0px auto;
+  margin-top: 20px;
+  border-bottom: .5px solid black;
+}
+
+.years_nav a{
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  padding: 5px 2%;
+  height: 100%;
+  border: 2px solid white;
+  border-bottom: none;
+  border-radius: 0px;
+  font-size: 12.5px;
+}
+
+
+.years_nav a:hover{
+  color: gold;
+  background: black;
+  border-bottom: 2px solid black;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.years_nav a.active, .years_nav a.active:hover{
+  color: white;
+  background:  rgb(9, 52, 241);
+  border-radius: 5px 5px 0px 0px;
+  border-bottom: 2px solid rgb(9, 52, 241);
+}
+
+
+
+/* **************Media Queries ***************** */
+
+@media screen and (min-width: 315px) {
+  .logo h2{
+    font-size: 12.5px;
+  }
+
+  .soccer_ball{
+    width: 12.5px;
+    height: 12.5px;
+  }
+
+  .nav_links li a{
+    font-size: 12.5px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .logo h2{
+    font-size: 20px;
+  }
+
+  .soccer_ball{
+    width: 30px;
+    height: 30px;
+  }
+
+  .nav_links li a{
+    font-size: 15px;
+  }
+}
+
+
+.team_img{
+  width: 100%;
+  height: 275px;
+}
+
+@media screen and (min-width: 600px) {
+  .team_img{
+    height: 350px
+  }
+
+  .years_nav a{
+    font-size: 15px;
+  }
+}
+

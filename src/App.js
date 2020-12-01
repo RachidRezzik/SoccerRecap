@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {
+  HashRouter,
+  Route,
+  Switch
+} from 'react-router-dom'
+// IMPORTING COMPONENTS
+import Home from './components/Home'
+import Header from './components/Header'
+import WorldCup from './components/WorldCup'
+import ChampionsLeague from './components/ChampionsLeague'
+import BallonDor from './components/BallonDor'
+import NotFound from './components/NotFound'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+const App = () => (
+  <HashRouter>
+  <h1 className="app_title">Soccer Recap (2000-2020)</h1>
+    <div className="container">
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/WorldCup" component={WorldCup} />
+        <Route path="/ChampionsLeague" component={ChampionsLeague} />
+        <Route path="/BallonDor" component={BallonDor} />
+        <Route component={NotFound} />
+      </Switch>
     </div>
-  );
-}
+  </HashRouter>
+);
 
 export default App;
